@@ -4,13 +4,12 @@
     "connector": "memory"
   },
   "postgres": {
-    "host": "localhost",
-    "port": 5432,
-    "url": "",
-    "database": "block-test",
-    "password": "",
+    "host": "${dbHost}",
+    "port": "${dbPort}",
+    "database": "${dbDatabase}",
+    "password": "${dbPassword}",
     "name": "postgres",
-    "user": "postgres",
+    "user": "${dbUser}",
     "connector": "postgresql"
   }
 }
