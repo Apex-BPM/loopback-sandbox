@@ -1,0 +1,21 @@
+version: '2'
+services:
+  loopback-sandbox:
+    build: .
+    command: npm start
+    depends_on:
+     - postgres
+    ports:
+     - "3000:3000"
+    environment:
+      dbHost: postgres
+      dbPort: 5432
+      dbUser: postgres
+      dbDatabase: block-test
+  postgres:
+    image: postgres
+    ports:
+     - "5432:5432"
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_DB: block-test

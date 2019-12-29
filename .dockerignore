@@ -1,0 +1,6 @@
+node_modules
+postgresql
+.github
+.DS_Store
+.git
+.gitignore
