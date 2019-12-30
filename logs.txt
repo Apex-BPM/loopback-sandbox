@@ -1,0 +1,252 @@
+MacBook-Pro-3:loopback-sandbox davidknapp$ docker-compose up --build
+Building loopback-sandbox
+Step 1/7 : FROM node:10
+ ---> 4ae749096a47
+Step 2/7 : WORKDIR /usr/src/app
+ ---> Using cache
+ ---> f06559dcc567
+Step 3/7 : COPY package*.json ./
+ ---> Using cache
+ ---> 49ba5806cb20
+Step 4/7 : RUN npm install
+ ---> Using cache
+ ---> 2a5c07185c5c
+Step 5/7 : COPY . .
+ ---> d4fe124e87bf
+Step 6/7 : EXPOSE 3000
+ ---> Running in 45ab96be2382
+Removing intermediate container 45ab96be2382
+ ---> c3d7a12a94ba
+Step 7/7 : CMD [ "npm", "start" ]
+ ---> Running in 38230cdb428b
+Removing intermediate container 38230cdb428b
+ ---> 6c20b35404b6
+Successfully built 6c20b35404b6
+Successfully tagged loopback-sandbox_loopback-sandbox:latest
+Starting loopback-sandbox_postgres_1 ... done
+Recreating loopback-sandbox_loopback-sandbox_1 ... done
+Attaching to loopback-sandbox_postgres_1, loopback-sandbox_loopback-sandbox_1
+postgres_1          | 2019-12-30 14:51:26.552 UTC [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
+postgres_1          | 2019-12-30 14:51:26.552 UTC [1] LOG:  listening on IPv6 address "::", port 5432
+postgres_1          | 2019-12-30 14:51:26.556 UTC [1] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+postgres_1          | 2019-12-30 14:51:26.567 UTC [25] LOG:  database system was interrupted; last known up at 2019-12-30 14:50:07 UTC
+postgres_1          | 2019-12-30 14:51:26.800 UTC [25] LOG:  database system was not properly shut down; automatic recovery in progress
+postgres_1          | 2019-12-30 14:51:26.802 UTC [25] LOG:  redo starts at 0/16A57F8
+postgres_1          | 2019-12-30 14:51:26.802 UTC [25] LOG:  invalid record length at 0/16A5830: wanted 24, got 0
+postgres_1          | 2019-12-30 14:51:26.802 UTC [25] LOG:  redo done at 0/16A57F8
+postgres_1          | 2019-12-30 14:51:26.817 UTC [1] LOG:  database system is ready to accept connections
+loopback-sandbox_1  | 
+loopback-sandbox_1  | > loopback-sandbox@1.0.0 start /usr/src/app
+loopback-sandbox_1  | > node .
+loopback-sandbox_1  | 
+loopback-sandbox_1  | ${dbPassword} does not resolve to a valid value, returned as undefined. "dbPassword" must be resolvable in Environment variable or by app.get().
+loopback-sandbox_1  | 	 checking client timeout
+loopback-sandbox_1  | 	 connecting new client
+loopback-sandbox_1  | Mon, 30 Dec 2019 14:51:28 GMT hsts deprecated The "includeSubdomains" parameter is deprecated. Use "includeSubDomains" (with a capital D) instead. at node_modules/loopback/lib/server-app.js:74:25
+loopback-sandbox_1  | 		 TickObject 14 triggered by 5 0.8ms
+loopback-sandbox_1  | 		 TickObject 15 triggered by 14 0.9ms
+loopback-sandbox_1  | settings { host: 'postgres',
+loopback-sandbox_1  |   port: '5432',
+loopback-sandbox_1  |   database: 'block-test',
+loopback-sandbox_1  |   password: undefined,
+loopback-sandbox_1  |   name: 'postgres',
+loopback-sandbox_1  |   user: 'postgres',
+loopback-sandbox_1  |   connector: 'postgresql',
+loopback-sandbox_1  |   log: [Function: log],
+loopback-sandbox_1  |   debug: false,
+loopback-sandbox_1  |   Promise:
+loopback-sandbox_1  |    { [Function: Promise]
+loopback-sandbox_1  |      TypeError: [Function: TypeError],
+loopback-sandbox_1  |      RangeError: [Function: RangeError],
+loopback-sandbox_1  |      CancellationError: [Function: SubError],
+loopback-sandbox_1  |      TimeoutError: [Function: SubError],
+loopback-sandbox_1  |      OperationalError: [Function: OperationalError],
+loopback-sandbox_1  |      RejectionError: [Function: OperationalError],
+loopback-sandbox_1  |      AggregateError: [Function: SubError],
+loopback-sandbox_1  |      _peekContext: [Function],
+loopback-sandbox_1  |      onPossiblyUnhandledRejection: [Function],
+loopback-sandbox_1  |      onUnhandledRejectionHandled: [Function],
+loopback-sandbox_1  |      longStackTraces: [Function],
+loopback-sandbox_1  |      hasLongStackTraces: [Function],
+loopback-sandbox_1  |      config: [Function],
+loopback-sandbox_1  |      getNewLibraryCopy: [Function],
+loopback-sandbox_1  |      is: [Function],
+loopback-sandbox_1  |      fromCallback: [Function],
+loopback-sandbox_1  |      fromNode: [Function],
+loopback-sandbox_1  |      all: [Function],
+loopback-sandbox_1  |      cast: [Function],
+loopback-sandbox_1  |      fulfilled: [Function],
+loopback-sandbox_1  |      resolve: [Function],
+loopback-sandbox_1  |      rejected: [Function],
+loopback-sandbox_1  |      reject: [Function],
+loopback-sandbox_1  |      setScheduler: [Function],
+loopback-sandbox_1  |      pending: [Function],
+loopback-sandbox_1  |      defer: [Function],
+loopback-sandbox_1  |      method: [Function],
+loopback-sandbox_1  |      try: [Function],
+loopback-sandbox_1  |      attempt: [Function],
+loopback-sandbox_1  |      bind: [Function],
+loopback-sandbox_1  |      PromiseInspection: [Function: PromiseInspection],
+loopback-sandbox_1  |      join: [Function],
+loopback-sandbox_1  |      Promise: [Circular],
+loopback-sandbox_1  |      version: '3.7.2',
+loopback-sandbox_1  |      coroutine: { [Function] addYieldHandler: [Function] },
+loopback-sandbox_1  |      spawn: [Function],
+loopback-sandbox_1  |      map: [Function],
+loopback-sandbox_1  |      promisify: [Function],
+loopback-sandbox_1  |      promisifyAll: [Function],
+loopback-sandbox_1  |      props: [Function],
+loopback-sandbox_1  |      race: [Function],
+loopback-sandbox_1  |      reduce: [Function],
+loopback-sandbox_1  |      settle: [Function],
+loopback-sandbox_1  |      allSettled: [Function],
+loopback-sandbox_1  |      some: [Function],
+loopback-sandbox_1  |      _SomePromiseArray: [Function: SomePromiseArray],
+loopback-sandbox_1  |      delay: [Function],
+loopback-sandbox_1  |      using: [Function],
+loopback-sandbox_1  |      any: [Function],
+loopback-sandbox_1  |      each: [Function],
+loopback-sandbox_1  |      mapSeries: [Function: PromiseMapSeries],
+loopback-sandbox_1  |      filter: [Function],
+loopback-sandbox_1  |      noConflict: [Function: noConflict] } }
+loopback-sandbox_1  | Web server listening at: http://localhost:3000
+loopback-sandbox_1  | Browse your REST API at http://localhost:3000/explorer
+loopback-sandbox_1  | 		 TickObject 17 triggered by 16 3.5ms
+loopback-sandbox_1  | 		 TickObject 18 triggered by 17 0.0ms
+loopback-sandbox_1  | 		 TickObject 19 triggered by 17 0.0ms
+loopback-sandbox_1  | 		 TickObject 20 triggered by 17 0.0ms
+loopback-sandbox_1  | 		 TCPCONNECTWRAP 21 triggered by 10 2.2ms
+loopback-sandbox_1  | 		 TickObject 22 triggered by 21 0.0ms
+loopback-sandbox_1  | 	 new client connected
+loopback-sandbox_1  | 	 checking client timeout
+loopback-sandbox_1  | 	 connecting new client
+loopback-sandbox_1  | 		 TickObject 23 triggered by 10 0.0ms
+loopback-sandbox_1  | 	 pulse queue
+loopback-sandbox_1  | 	 no queued requests
+loopback-sandbox_1  | 		 TickObject 24 triggered by 10 2.3ms
+loopback-sandbox_1  | 		 TickObject 25 triggered by 10 0.0ms
+loopback-sandbox_1  | 		 TickObject 26 triggered by 10 0.0ms
+loopback-sandbox_1  | 		 TickObject 29 triggered by 10 0.1ms
+loopback-sandbox_1  | 		 TickObject 30 triggered by 10 0.1ms
+loopback-sandbox_1  | 		 TickObject 33 triggered by 24 0.0ms
+loopback-sandbox_1  | 		 TickObject 34 triggered by 24 0.0ms
+loopback-sandbox_1  | 		 GETADDRINFOREQWRAP 28 triggered by 27 0.4ms
+loopback-sandbox_1  | 		 TCPCONNECTWRAP 35 triggered by 27 0.7ms
+loopback-sandbox_1  | 		 TickObject 36 triggered by 35 0.0ms
+loopback-sandbox_1  | 	 new client connected
+loopback-sandbox_1  | 		 TCPWRAP 27 triggered by 10 2.7ms
+loopback-sandbox_1  | 		 TickObject 37 triggered by 27 0.0ms
+loopback-sandbox_1  | 		 TickObject 38 triggered by 27 0.0ms
+loopback-sandbox_1  | 		 TickObject 39 triggered by 27 0.0ms
+loopback-sandbox_1  | 	 pulse queue
+loopback-sandbox_1  | 	 no queued requests
+loopback-sandbox_1  | 		 TCPWRAP 27 triggered by 10 3.2ms
+loopback-sandbox_1  | 		 TickObject 41 triggered by 27 0.0ms
+loopback-sandbox_1  | 		 TickObject 42 triggered by 27 0.0ms
+loopback-sandbox_1  | 	 pulse queue
+loopback-sandbox_1  | 		 TickObject 43 triggered by 27 1.6ms
+loopback-sandbox_1  | 		 TickObject 44 triggered by 27 0.1ms
+loopback-sandbox_1  | 		 TickObject 45 triggered by 43 0.0ms
+loopback-sandbox_1  | 		 TickObject 46 triggered by 43 0.0ms
+loopback-sandbox_1  | 	 pulse queue
+loopback-sandbox_1  | 	 no queued requests
+loopback-sandbox_1  | 		 TCPWRAP 27 triggered by 10 3.7ms
+loopback-sandbox_1  | 		 TickObject 48 triggered by 27 0.0ms
+loopback-sandbox_1  | 		 TickObject 49 triggered by 27 0.2ms
+loopback-sandbox_1  | 	 pulse queue
+loopback-sandbox_1  | 		 TickObject 50 triggered by 27 1.0ms
+loopback-sandbox_1  | 		 TickObject 51 triggered by 27 0.0ms
+loopback-sandbox_1  | 		 TickObject 52 triggered by 50 0.0ms
+loopback-sandbox_1  | 		 TickObject 53 triggered by 50 0.0ms
+loopback-sandbox_1  | 	 pulse queue
+loopback-sandbox_1  | 	 no queued requests
+loopback-sandbox_1  | 		 TCPWRAP 27 triggered by 10 5.1ms
+loopback-sandbox_1  | 		 TickObject 55 triggered by 27 0.0ms
+loopback-sandbox_1  | 		 TickObject 56 triggered by 27 0.0ms
+loopback-sandbox_1  | 	 pulse queue
+loopback-sandbox_1  | 		 TickObject 57 triggered by 27 1.0ms
+loopback-sandbox_1  | 		 TickObject 58 triggered by 27 0.0ms
+loopback-sandbox_1  | 		 TickObject 59 triggered by 57 0.0ms
+loopback-sandbox_1  | 		 TickObject 60 triggered by 57 0.0ms
+loopback-sandbox_1  | 	 pulse queue
+loopback-sandbox_1  | 	 no queued requests
+loopback-sandbox_1  | autoupdate complete
+loopback-sandbox_1  | 		 TCPWRAP 27 triggered by 10 2.5ms
+loopback-sandbox_1  | 		 TickObject 62 triggered by 27 0.0ms
+loopback-sandbox_1  | 		 TickObject 63 triggered by 27 0.0ms
+loopback-sandbox_1  | 		 TickObject 64 triggered by 27 0.0ms
+loopback-sandbox_1  | 		 TickObject 65 triggered by 27 0.0ms
+loopback-sandbox_1  | 		 TCPSERVERWRAP 16 triggered by 15 17.5ms
+loopback-sandbox_1  | 		 TickObject 72 triggered by 66 0.1ms
+loopback-sandbox_1  | 		 HTTPPARSER 69 triggered by 66 16.3ms
+loopback-sandbox_1  | 		 HTTPPARSER 69 triggered by 66 0.8ms
+loopback-sandbox_1  | 		 HTTPPARSER 69 triggered by 66 0.4ms
+loopback-sandbox_1  | 		 TickObject 73 triggered by 69 5.5ms
+loopback-sandbox_1  | 		 TickObject 74 triggered by 69 0.1ms
+loopback-sandbox_1  | 	 pulse queue
+loopback-sandbox_1  | 		 TickObject 75 triggered by 73 0.9ms
+loopback-sandbox_1  | 		 TickObject 76 triggered by 75 0.0ms
+loopback-sandbox_1  | 		 TickObject 77 triggered by 75 0.0ms
+loopback-sandbox_1  | 		 TCPWRAP 27 triggered by 10 6.4ms
+loopback-sandbox_1  | 		 TickObject 78 triggered by 27 0.0ms
+loopback-sandbox_1  | 	 pulse queue
+loopback-sandbox_1  | 	 no queued requests
+loopback-sandbox_1  | 		 TCPWRAP 27 triggered by 10 89.4ms
+loopback-sandbox_1  | 		 TCPWRAP 27 trace:
+loopback-sandbox_1  | 		     at Socket.connect (net.js:918:7)
+loopback-sandbox_1  | 		    at Connection.connect (/usr/src/app/node_modules/pg/lib/connection.js:54:17)
+loopback-sandbox_1  | 		    at Client._connect (/usr/src/app/node_modules/pg/lib/client.js:102:9)
+loopback-sandbox_1  | 		    at Client.connect (/usr/src/app/node_modules/pg/lib/client.js:288:10)
+loopback-sandbox_1  | 		    at Pool.newClient (/usr/src/app/node_modules/pg-pool/index.js:208:12)
+loopback-sandbox_1  | 		    at Pool.connect (/usr/src/app/node_modules/pg-pool/index.js:183:10)
+loopback-sandbox_1  | 		    at PostgreSQL.executeSQL (/usr/src/app/node_modules/loopback-connector-postgresql/lib/postgresql.js:166:13)
+loopback-sandbox_1  | 		    at /usr/src/app/node_modules/loopback-connector/lib/sql.js:651:10
+loopback-sandbox_1  | 		    at /usr/src/app/node_modules/loopback-datasource-juggler/lib/observer.js:259:9
+loopback-sandbox_1  | 		    at doNotify (/usr/src/app/node_modules/loopback-datasource-juggler/lib/observer.js:155:49)
+loopback-sandbox_1  | 		    at PostgreSQL.ObserverMixin._notifyBaseObservers (/usr/src/app/node_modules/loopback-datasource-juggler/lib/observer.js:178:5)
+loopback-sandbox_1  | 		    at PostgreSQL.ObserverMixin.notifyObserversOf (/usr/src/app/node_modules/loopback-datasource-juggler/lib/observer.js:153:8)
+loopback-sandbox_1  | 		    at PostgreSQL.ObserverMixin.notifyObserversAround (/usr/src/app/node_modules/loopback-datasource-juggler/lib/observer.js:228:15)
+loopback-sandbox_1  | 		    at PostgreSQL.SQLConnector.execute (/usr/src/app/node_modules/loopback-connector/lib/sql.js:650:8) undefined
+loopback-sandbox_1  | 		 TickObject 80 triggered by 27 0.0ms
+loopback-sandbox_1  | 		 TickObject 81 triggered by 27 0.0ms
+loopback-sandbox_1  | 		 TickObject 82 triggered by 27 2.3ms
+loopback-sandbox_1  | 		 TickObject 83 triggered by 27 0.0ms
+loopback-sandbox_1  | 		 TickObject 84 triggered by 82 0.8ms
+loopback-sandbox_1  | 		 TickObject 87 triggered by 84 0.2ms
+loopback-sandbox_1  | 		 TickObject 88 triggered by 84 0.0ms
+loopback-sandbox_1  | 		 TickObject 89 triggered by 84 0.0ms
+loopback-sandbox_1  | 		 Timeout 70 triggered by 66 0.1ms
+loopback-sandbox_1  | 		 TIMERWRAP 71 triggered by 66 0.7ms
+loopback-sandbox_1  | 	 remove idle client
+loopback-sandbox_1  | 		 Timeout 31 triggered by 24 1.8ms
+loopback-sandbox_1  | 		 TIMERWRAP 32 triggered by 24 2.0ms
+loopback-sandbox_1  | 		 TickObject 90 triggered by 31 0.0ms
+loopback-sandbox_1  | 		 TickObject 91 triggered by 31 0.4ms
+loopback-sandbox_1  | 		 TickObject 92 triggered by 91 0.3ms
+loopback-sandbox_1  | 		 SHUTDOWNWRAP 93 triggered by 10 0.2ms
+loopback-sandbox_1  | 		 TickObject 94 triggered by 10 0.7ms
+loopback-sandbox_1  | 		 TickObject 95 triggered by 10 0.0ms
+loopback-sandbox_1  | 		 TickObject 96 triggered by 94 0.0ms
+loopback-sandbox_1  | 		 TickObject 97 triggered by 94 0.0ms
+loopback-sandbox_1  | 		 Timeout 85 triggered by 82 0.9ms
+loopback-sandbox_1  | 		 TIMERWRAP 86 triggered by 82 1.1ms
+loopback-sandbox_1  | 		 TickObject 98 triggered by 85 0.0ms
+loopback-sandbox_1  | 		 TCPWRAP 66 triggered by 16 0.2ms
+loopback-sandbox_1  | 	 remove idle client
+loopback-sandbox_1  | 		 Timeout 79 triggered by 27 0.8ms
+loopback-sandbox_1  | 		 TIMERWRAP 32 triggered by 24 0.9ms
+loopback-sandbox_1  | 		 TickObject 99 triggered by 79 0.0ms
+loopback-sandbox_1  | 		 TickObject 100 triggered by 79 0.2ms
+loopback-sandbox_1  | 		 TickObject 101 triggered by 100 0.1ms
+loopback-sandbox_1  | 		 SHUTDOWNWRAP 102 triggered by 27 0.0ms
+loopback-sandbox_1  | 		 TCPWRAP 27 triggered by 10 0.2ms
+loopback-sandbox_1  | 		 TickObject 103 triggered by 27 0.4ms
+loopback-sandbox_1  | 		 TickObject 104 triggered by 27 0.0ms
+loopback-sandbox_1  | 		 TickObject 105 triggered by 103 0.1ms
+loopback-sandbox_1  | 		 TickObject 106 triggered by 103 0.1ms
+loopback-sandbox_1  | 		 TCPWRAP 27 triggered by 10 0.0ms
+loopback-sandbox_1  | 		 TCPSERVERWRAP 16 triggered by 15 2.5ms
+loopback-sandbox_1  | 		 TickObject 112 triggered by 107 0.0ms
+loopback-sandbox_1  | 		 HTTPPARSER 109 triggered by 107 4.1ms
+loopback-sandbox_1  | 		 HTTPPARSER 109 triggered by 107 1.0ms
+loopback-sandbox_1  | 		 HTTPPARSER 109 triggered by 107 0.0ms

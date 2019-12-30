@@ -10,10 +10,6 @@
     "password": "${dbPassword}",
     "name": "postgres",
     "user": "${dbUser}",
-    "connector": "postgresql",
-    "ssl": false,
-    "idleTimeoutMillis": 60000,
-    "max": 5,
-    "min": 2
+    "connector": "postgresql"
   }
 }
